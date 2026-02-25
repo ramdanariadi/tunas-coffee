@@ -3,16 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="164dp"
     android:orientation="vertical"
+    android:paddingVertical="22dp"
+    android:gravity="center_horizontal"
     android:background="@drawable/white_bg_all_rounded">
 
     <ImageView
         android:id="@+id/category_image"
+        android:src="@drawable/coffee_bean"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        android:layout_weight="2"/>
 
     <TextView
         android:id="@+id/category_text"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Image"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="22dp"
+        android:text="Category"/>
 </LinearLayout>
