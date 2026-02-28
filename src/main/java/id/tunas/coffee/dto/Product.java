@@ -1,17 +1,16 @@
 package id.tunas.coffee.dto;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Product {
     private String name;
-    private String img;
+    private String imageUrl;
     private BigDecimal price;
 
     public Product(String name, String img, BigDecimal price) {
         this.name = name;
-        this.img = img;
+        this.imageUrl = img;
         this.price = price;
     }
 
@@ -33,12 +32,12 @@ public class Product {
         this.name = name;
     }
 
-    public String getImg() {
-        return img;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public BigDecimal getPrice() {
@@ -47,5 +46,14 @@ public class Product {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

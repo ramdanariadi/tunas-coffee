@@ -36,7 +36,7 @@ public class ProductGridAdapter extends RecyclerView.Adapter<ProductGridAdapter.
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
         Product category = products.get(position);
         holder.product.setText(category.getName());
-        Glide.with(holder.itemView.getContext()).load(category.getImg()).into(holder.img);
+        Glide.with(holder.itemView.getContext()).load(category.getImageUrl()).into(holder.img);
     }
 
     @Override

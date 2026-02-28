@@ -35,7 +35,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         Product product = this.products.get(i);
         productViewHolder.productName.setText(product.getName());
         productViewHolder.productPrice.setText(String.valueOf(product.getPrice()));
-        productViewHolder.productImage.setImageURI(Uri.parse(product.getImg()));
+        productViewHolder.productImage.setImageURI(Uri.parse(product.getImageUrl()));
     }
 
     @Override
