@@ -46,7 +46,7 @@ public class TokenManagement {
         String accessToken = sharedPreferences.getString(TOKEN_KEY, null);
         if(accessToken != null && isTokenExpired(accessToken)){
             String refreshToken = sharedPreferences.getString(REFRESH_TOKEN_KEY, null);
-            Retrofit instance = RetrofitClient.getInstance();
+            Retrofit instance = RetrofitClient.getInstance(this);
             LoginApiService loginApiService = instance.create(LoginApiService.class);
             GetAccessTokenRequest getAccessTokenRequest = new GetAccessTokenRequest(refreshToken);
             Call<LoginResponse> token = loginApiService.token(getAccessTokenRequest);

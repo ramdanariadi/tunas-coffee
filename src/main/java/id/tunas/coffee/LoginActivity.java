@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void login(String username, String password){
         TokenManagement tokenManagement = TokenManagement.getInstance(this);
-        Retrofit instance = RetrofitClient.getInstance();
+        Retrofit instance = RetrofitClient.getInstance(tokenManagement);
         LoginApiService loginApiService = instance.create(LoginApiService.class);
 
         LoginRequest loginRequest = new LoginRequest(username, password);

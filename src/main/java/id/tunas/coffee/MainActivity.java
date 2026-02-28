@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity
     private void getProducts(RecyclerView recyclerView){
         Retrofit instance = RetrofitClient.getInstance();
         TokenManagement tokenManagement = TokenManagement.getInstance(this);
+        Retrofit instance = RetrofitClient.getInstance(tokenManagement);
         ProductApiService productApiService = instance.create(ProductApiService.class);
         productApiService.getProducts("Bearer " + tokenManagement.getToken()).enqueue(new retrofit2.Callback<>() {
             @Override

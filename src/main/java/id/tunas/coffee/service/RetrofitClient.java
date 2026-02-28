@@ -7,14 +7,24 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
     private static final String BASE_URL = "http://10.0.2.2:8080/";
+//    private static final String BASE_URL = "http://192.168.1.8:8080/";
+
     private static Retrofit instance;
 
-    public static Retrofit getInstance(){
+    public static Retrofit getInstance(TokenManagement tokenManagement){
         if(instance == null){
             HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
-            OkHttpClient okHttpClient = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+            OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                    .addInterceptor(chain -> {
+                        if(tokenManagement.getToken() != null){
+                            chain.request().newBuilder().addHeader("Authorization", "Bearer" + tokenManagement.getToken()).build();
+                        }
+                        return chain.proceed(chain.request());
+                    })
+                    .addInterceptor(interceptor)
+                    .build();
             instance = new Retrofit.Builder().baseUrl(BASE_URL)
                     .client(okHttpClient)
                     .addConverterFactory(GsonConverterFactory.create())

@@ -55,7 +55,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void register(String username, String email, String mobile, String password){
         TokenManagement tokenManagement = TokenManagement.getInstance(this);
-        Retrofit instance = RetrofitClient.getInstance();
+        Retrofit instance = RetrofitClient.getInstance(tokenManagement);
         UserApiService userApiService = instance.create(UserApiService.class);
         RegisterRequest registerRequest = new RegisterRequest(username, email, mobile, password);
         Call<LoginResponse> register = userApiService.register(registerRequest);
