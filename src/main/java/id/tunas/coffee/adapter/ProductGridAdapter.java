@@ -1,5 +1,6 @@
 package id.tunas.coffee.adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import id.tunas.coffee.OrderActivity;
 import id.tunas.coffee.R;
 import id.tunas.coffee.dto.Product;
 
@@ -53,6 +55,10 @@ public class ProductGridAdapter extends RecyclerView.Adapter<ProductGridAdapter.
 
             this.product = itemView.findViewById(R.id.category_text);
             this.img = itemView.findViewById(R.id.category_image);
+            itemView.setOnClickListener(v -> {
+                Intent intent = new Intent(itemView.getContext(), OrderActivity.class);
+                itemView.getContext().startActivity(intent);
+            });
         }
     }
 }
