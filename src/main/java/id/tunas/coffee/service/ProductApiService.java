@@ -8,5 +8,5 @@ import retrofit2.http.Header;
 public interface ProductApiService {
 
     @GET("/api/v1/product")
-    Call<GetProductsResponse> getProducts(@Header("Authorization") String token);
+    Call<GetProductsResponse> getProducts();
 }
