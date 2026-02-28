@@ -18,4 +18,12 @@
     <string name="mobile_number">Mobile number</string>
     <string name="alex">Alex</string>
     <string name="select_your_coffee">Select your coffee</string>
+    <string name="order">Order</string>
+    <string name="ristretto">Ristretto</string>
+    <string name="onsite_takeaway">Onsite / Takeaway</string>
+    <string name="volume_ml">Volume, ml</string>
+    <string name="ml_s">250</string>
+    <string name="ml_m">350</string>
+    <string name="ml_l">450</string>
+    <string name="prepare_by_a_certain_time_today">Prepare by a certain time today?</string>
 </resources>
