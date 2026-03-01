@@ -84,19 +84,22 @@
                 android:paddingHorizontal="12dp">
 
                 <TextView
+                    android:id="@+id/qty_minus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/order_specification_title"
                     android:text="-"/>
 
                 <TextView
+                    android:id="@+id/quantity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
                     android:textAppearance="@style/order_specification_title"
-                    android:text="0"/>
+                    android:text="1"/>
 
                 <TextView
+                    android:id="@+id/qty_plus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/order_specification_title"
@@ -141,23 +144,26 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/ristretto_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
                     android:textAppearance="@style/order_specification_title"
                     android:paddingVertical="6dp"
                     android:paddingHorizontal="24dp"
-                    android:background="@drawable/grey_rounded_border"
-                    android:text="One"/>
+                    android:background="@drawable/bg_primary_all_rounded_50"
+                    android:textColor="@color/card_white"
+                    android:text="@string/one"/>
 
                 <TextView
+                    android:id="@+id/ristretto_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/order_specification_title"
                     android:paddingVertical="6dp"
                     android:paddingHorizontal="24dp"
                     android:background="@drawable/grey_rounded_border"
-                    android:text="Two"/>
+                    android:text="@string/two"/>
 
             </LinearLayout>
 
@@ -200,12 +206,14 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/onsite"
                     android:layout_width="wrap_content"
                     android:layout_height="26.56dp"
                     android:layout_marginEnd="30dp"
                     android:src="@drawable/onsite_cup_disabled"/>
 
                 <ImageView
+                    android:id="@+id/take_away"
                     android:layout_width="wrap_content"
                     android:layout_height="34dp"
                     android:layout_marginEnd="8dp"
@@ -252,12 +260,14 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
+                    android:id="@+id/volume_s_container"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="21dp"
                     android:gravity="center"
                     android:orientation="vertical">
                     <ImageView
+                        android:id="@+id/volume_s_cup"
                         android:layout_width="wrap_content"
                         android:layout_height="22dp"
                         android:src="@drawable/cup_size_m_disabled"/>
@@ -272,12 +282,14 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/volume_m_container"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="21dp"
                     android:gravity="center"
                     android:orientation="vertical">
                     <ImageView
+                        android:id="@+id/volume_m_cup"
                         android:layout_width="wrap_content"
                         android:layout_height="31dp"
                         android:src="@drawable/cup_size_s_active"/>
@@ -291,11 +303,13 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/volume_l_container"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical">
                     <ImageView
+                        android:id="@+id/volume_l_cup"
                         android:layout_width="wrap_content"
                         android:layout_height="38dp"
                         android:src="@drawable/cup_size_l_disabled"/>
