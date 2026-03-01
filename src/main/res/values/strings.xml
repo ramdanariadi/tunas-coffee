@@ -29,4 +29,6 @@
     <string name="coffee_lover_assemblage">Coffee lover assemblage</string>
     <string name="total_amount">Total Amount</string>
     <string name="next">Next</string>
+    <string name="one">One</string>
+    <string name="two">Two</string>
 </resources>
